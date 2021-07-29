@@ -1,38 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+* {
+    font-family: 'Roboto';
+}
+
 .App {
-  text-align: center;
+    min-height: 100vh;
+    min-width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.page {
+    min-height: 70vh;
+    min-width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/*  FrontPage */
+
+.title {
+    font-size: 4rem;
+    padding: 3rem;
+    text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.top {
+    min-width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+
+.name {
+    text-align: center;
+    padding: 20px 20px 0px 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.username {
+    margin-bottom: 10rem;
+}
+
+/*Quiz Page*/
+
+.nav-title {
+    font-size: 2rem;
+    padding: 0rem 3rem 0rem 3rem;
+}
+
+#question {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+    align-self: center;
+}
+
+#buttons {
+    margin: 3rem;
+    min-width: 40vw;
+}
+
+.btn {
+    padding: 20px;
+}
+
+.wrapper {
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+.score {
+    text-align: center;
+}
+
+#quiz-button {
+    padding: 20px 40px 20px 40px;
+    max-width: 10rem;
+}
+
+
+/*Leader Board*/
+
+.leaderboard-wrapper {
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+.leaderboard-title {
+    padding: 3rem 0rem 3rem 0rem;
+}
+
+th {
+    font-size: 1.5rem;
+    text-align: center;
 }
