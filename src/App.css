@@ -9,9 +9,10 @@
     min-width: 100%;
 }
 
-.page {
-    min-height: 70vh;
+.start-page {
+    min-height: 100vh;
     min-width: 100%;
+    background-size: contain;
 }
 
 
@@ -23,10 +24,6 @@
     text-align: center;
 }
 
-.top {
-    min-width: 100%;
-}
-
 
 .name {
     text-align: center;
@@ -35,6 +32,7 @@
 
 .username {
     margin-bottom: 10rem;
+    width: auto;
 }
 
 /*Quiz Page*/
@@ -49,10 +47,11 @@
     margin-bottom: 100px;
     text-align: center;
     align-self: center;
+    word-wrap: break-word;
 }
 
 #buttons {
-    margin: 3rem;
+    margin: 1.7rem;
     min-width: 40vw;
 }
 

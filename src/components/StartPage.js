@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Redirect } from 'react-router-dom'
+import { Card } from 'react-bootstrap'
 
 
 const StartPage = ({ handleusername }) => {
@@ -12,7 +13,7 @@ const StartPage = ({ handleusername }) => {
     }
 
     return (
-        <div className="d-flex container align-items-center flex-column justify-content-center page" >
+        <div className="d-flex container align-items-center flex-column justify-content-center start-page" >
             <div className="row top">
                 <h1 className="title">Quizz Me Not</h1>
                 <h3 className="name">Enter you name</h3>

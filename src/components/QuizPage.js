@@ -91,14 +91,14 @@ const QuizPage = ({ handlescore }) => {
                         </Row>
                         <Row id="buttons" >
                             <div className="col d-flex justify-content-around">
-                                <Button className="options" id="quiz-button" variant="light" onClick={handleAnswerOptionClick} value={options[0]}>{options[0]}</Button>
-                                <Button className="options" id="quiz-button" variant="light" onClick={handleAnswerOptionClick} value={options[1]}>{options[1]}</Button>
+                                <Button className="options btn-block" id="quiz-button" variant="light" onClick={handleAnswerOptionClick} value={options[0]}>{options[0]}</Button>
+                                <Button className="options btn-block" id="quiz-button" variant="light" onClick={handleAnswerOptionClick} value={options[1]}>{options[1]}</Button>
                             </div>
                         </Row>
                         <Row id="buttons">
                             <div className="col d-flex justify-content-around">
-                                <Button className="options" id="quiz-button" variant="light" onClick={handleAnswerOptionClick} value={options[2]}>{options[2]}</Button>
-                                <Button className="options" id="quiz-button" variant="light" onClick={handleAnswerOptionClick} value={options[3]}>{options[3]}</Button>
+                                <Button className="options btn-block" id="quiz-button" variant="light" onClick={handleAnswerOptionClick} value={options[2]}>{options[2]}</Button>
+                                <Button className="options btn-block" id="quiz-button" variant="light" onClick={handleAnswerOptionClick} value={options[3]}>{options[3]}</Button>
                             </div>
                         </Row>
                     </div>
