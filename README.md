@@ -1,3 +1,14 @@
+# Quizz Me Not
+
+## This is a 10 question General Knowledge Quiz App. It is created using the MERN Stack. The app will display the leaderboard after the quiz has ended.
+
+## Link of the web app: https://quizz-me-not.herokuapp.com/
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
