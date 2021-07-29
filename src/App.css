@@ -74,6 +74,10 @@
 }
 
 
+#loading {
+    min-height: 100vh;
+}
+
 /*Leader Board*/
 
 .leaderboard-wrapper {

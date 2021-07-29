@@ -13,7 +13,9 @@ const LeaderBoard = ({ newusername, newscore }) => {
         const getScores = async () => {
             const scores = await axios.get('api/scores/')
             console.log(scores)
-            setscores(scores.data)
+            const data = scores.data
+            data.sort((a, b) => b.score - a.score)
+            setscores(data)
         }
 
         const postScores = async () => {
@@ -34,7 +36,7 @@ const LeaderBoard = ({ newusername, newscore }) => {
         <div className="leaderboard-wrapper">
             <div className="container-fluid">
                 <div className=" leaderboard-title d-flex align-items-center justify-content-center">
-                    <h2>LeaderBoard</h2>
+                    <h1>LeaderBoard</h1>
                 </div>
                 <Table bordered hover >
                     <thead>

@@ -1,8 +1,10 @@
-import { Row, Button, Card, Spinner, Navbar, Container } from "react-bootstrap";
+import { Row, Button, Card, Spinner, Navbar } from "react-bootstrap";
 import { useEffect, useState } from 'react';
 import axios from "axios";
 import { Redirect } from 'react-router-dom';
 import Alertbar from './Alertbar'
+import { decode } from 'html-entities';
+
 
 
 const QuizPage = ({ handlescore }) => {
@@ -20,7 +22,6 @@ const QuizPage = ({ handlescore }) => {
 
         const getData = async () => {
             const data = await axios.get('https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple')
-            console.log(data.data.results)
             setques(data.data.results)
             randomizeans(data.data.results, 0);
             setVisible(true)
@@ -33,7 +34,6 @@ const QuizPage = ({ handlescore }) => {
     const randomizeans = (question, num) => {
         const answers = [...question[num].incorrect_answers, question[num].correct_answer]
         answers.sort(() => .5 - Math.random())
-        console.log(answers)
         setoptions(answers)
     }
 
@@ -86,25 +86,25 @@ const QuizPage = ({ handlescore }) => {
                         <Alertbar alertcolor={alert} correct={ques[number].correct_answer} />
                         <Row>
                             <Card id="question" className=" w-auto ">
-                                <Card.Body>{ques[number].question}</Card.Body>
+                                <Card.Body>{decode(ques[number].question)}</Card.Body>
                             </Card>
                         </Row>
                         <Row id="buttons" >
                             <div className="col d-flex justify-content-around">
-                                <Button className="options btn-block" id="quiz-button" variant="light" onClick={handleAnswerOptionClick} value={options[0]}>{options[0]}</Button>
-                                <Button className="options btn-block" id="quiz-button" variant="light" onClick={handleAnswerOptionClick} value={options[1]}>{options[1]}</Button>
+                                <Button className="options btn-block" id="quiz-button" variant="light" onClick={handleAnswerOptionClick} value={options[0]}>{decode(options[0])}</Button>
+                                <Button className="options btn-block" id="quiz-button" variant="light" onClick={handleAnswerOptionClick} value={options[1]}>{decode(options[1])}</Button>
                             </div>
                         </Row>
                         <Row id="buttons">
                             <div className="col d-flex justify-content-around">
-                                <Button className="options btn-block" id="quiz-button" variant="light" onClick={handleAnswerOptionClick} value={options[2]}>{options[2]}</Button>
-                                <Button className="options btn-block" id="quiz-button" variant="light" onClick={handleAnswerOptionClick} value={options[3]}>{options[3]}</Button>
+                                <Button className="options btn-block" id="quiz-button" variant="light" onClick={handleAnswerOptionClick} value={options[2]}>{decode(options[2])}</Button>
+                                <Button className="options btn-block" id="quiz-button" variant="light" onClick={handleAnswerOptionClick} value={options[3]}>{decode(options[3])}</Button>
                             </div>
                         </Row>
                     </div>
                 </div>
                 : <div>
-                    <div className="d-flex justify-content-center">
+                    <div id="loading" className="d-flex justify-content-center align-items-center">
                         <Spinner animation="border" role="status" variant="light">
                             <span className="visually-hidden">Loading...</span>
                         </Spinner>
